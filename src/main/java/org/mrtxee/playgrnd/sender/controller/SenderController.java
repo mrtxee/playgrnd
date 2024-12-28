@@ -3,16 +3,14 @@ package org.mrtxee.playgrnd.sender.controller;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.mrtxee.playgrnd.sender.service.DataBin;
-import org.mrtxee.playgrnd.sender.service.requestInvoker;
+import org.mrtxee.playgrnd.sender.service.RequestInvoker;
 import org.springframework.stereotype.Controller;
 
 @Controller
 @RequiredArgsConstructor
 @Slf4j
 public class SenderController {
-  private final requestInvoker requestInvoker;
-  private final DataBin dataBin;
+  private final RequestInvoker requestInvoker;
 
   @PostConstruct
   private void initialSend() {
@@ -32,11 +30,11 @@ public class SenderController {
      *  Для того, чтобы SenderImpl<R> смог определить тип дженерика, приходится спускать тип в
      *  конструктор, который в последствии нигде не используется. Не хотелось бы этого делать.
      *
-     *  Как заменить строку SenderController:40 на: String response = requestInvoker.invoke(), и избежать проблемы
+     *  Как заменить строку SenderController:40 на: String response = RequestInvoker.invoke(), и избежать проблемы
      *  затирания типов?
      */
 
-    //todo: String response = requestInvoker.invoke() ??
+    //todo: String response = RequestInvoker.invoke() ??
     String response = requestInvoker.invoke(String.class)
       .setPrivate(true)
       .setName("Петя")

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class requestInvoker {
+public class RequestInvoker {
 
   private final DataBin dataBin;
 

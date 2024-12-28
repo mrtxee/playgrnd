@@ -10,6 +10,7 @@ import org.apache.commons.lang3.SerializationUtils;
 public class SenderImpl<R> implements Sender<R> {
   private final RequestDto request;
 
+  //todo: убрать Class<R> responseType из сигнатуры, и при этом не терять тип
   public SenderImpl(Class<R> responseType, DataBin dataBin) {
     this.request = RequestDto.builder()
       .age(MoreObjects.firstNonNull(dataBin.getAge(), 10))

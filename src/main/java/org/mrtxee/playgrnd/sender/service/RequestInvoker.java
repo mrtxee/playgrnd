@@ -11,6 +11,6 @@ public class RequestInvoker {
   private final DataBin dataBin;
 
   public <R> Sender<R> invoke(Class<R> responseType) {
-    return new SenderImpl<>(responseType, dataBin);
+    return new SenderImpl<R>(responseType, dataBin);
   }
 }

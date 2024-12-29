@@ -15,27 +15,8 @@ public class SenderController {
   @PostConstruct
   private void initialSend() {
     log.debug("initialSend");
-
-    /**
-     * Задача:
-     *  - Имплементировать интерфейс в стиле билдер для генерации запросов во внешнюю систему
-     *
-     * Ограничения:
-     *  - Для каждого запроса создается экземпляр pojo-класса SenderImpl<R>. Это связано с разнообразием запросов и
-     *  сложностью их настройки.
-     *  - <R> - тип возвращаемого ответа.
-     *  - Интерфейс запроса - org.mrtxee.playgrnd.sender.api.Sender
-     *
-     *  Проблема:
-     *  Для того, чтобы SenderImpl<R> смог определить тип дженерика, приходится спускать тип в
-     *  requestInvoker, который в последствии не используется. Не хотелось бы этого делать.
-     *
-     *  Как заменить строку SenderController:38 на String response = RequestInvoker.invoke(), и избежать проблемы
-     *  затирания типов?
-     */
-
-    //todo: String response = RequestInvoker.invoke() ??
-    String response = requestInvoker.invoke(String.class)
+    
+    String response = requestInvoker.<String>invoke()
       .setPrivate(true)
       .setName("Петя")
       .setBin("бин выставлен вручную")

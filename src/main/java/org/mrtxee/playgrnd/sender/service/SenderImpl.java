@@ -8,14 +8,12 @@ import org.apache.commons.lang3.SerializationUtils;
 
 @Slf4j
 public class SenderImpl<R> implements Sender<R> {
+  private final DataBin dataBin;
   private final RequestDto request;
 
   public SenderImpl(DataBin dataBin) {
-    this.request = RequestDto.builder()
-      .age(MoreObjects.firstNonNull(dataBin.getAge(), 10))
-      .name("Fedor")
-      .bin(dataBin.getFromBin())
-      .build();
+    this.dataBin = dataBin;
+    this.request = getInitialRequest();
   }
 
   @Override
@@ -48,6 +46,14 @@ public class SenderImpl<R> implements Sender<R> {
   public Sender<R> setName(String name){
     request.setName(name);
     return this;
+  }
+
+  private RequestDto getInitialRequest(){
+    return RequestDto.builder()
+      .age(MoreObjects.firstNonNull(dataBin.getAge(), 10))
+      .name("Fedor")
+      .bin(dataBin.getFromBin())
+      .build();
   }
 
 }

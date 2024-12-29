@@ -30,7 +30,7 @@ public class SenderController {
      *  Для того, чтобы SenderImpl<R> смог определить тип дженерика, приходится спускать тип в
      *  requestInvoker, который в последствии нигде не используется. Не хотелось бы этого делать.
      *
-     *  Как заменить строку SenderController:40 на: String response = RequestInvoker.invoke(), и избежать проблемы
+     *  Как заменить строку SenderController:38 на String response = RequestInvoker.invoke(), и избежать проблемы
      *  затирания типов?
      */
 

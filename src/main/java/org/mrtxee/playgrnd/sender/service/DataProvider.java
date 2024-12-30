@@ -4,7 +4,7 @@ import java.util.Random;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DataBin {
+public class DataProvider {
   private final Random random = new Random();
 
   public String getFromBin() {

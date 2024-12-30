@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class RequestInvoker {
 
-  private final DataBin dataBin;
+  private final DataProvider dataProvider;
 
   public <R> Sender<R> invoke() {
-    return new <R> SenderImpl<R>(dataBin);
+    return new <R> SenderImpl<R>(dataProvider);
   }
 
 }

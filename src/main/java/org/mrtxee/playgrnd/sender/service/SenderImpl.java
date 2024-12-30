@@ -8,18 +8,18 @@ import org.apache.commons.lang3.SerializationUtils;
 
 @Slf4j
 public class SenderImpl<R> implements Sender<R> {
-  private final DataBin dataBin;
+  private final DataProvider dataProvider;
   private final RequestDto request;
 
-  public SenderImpl(DataBin dataBin) {
-    this.dataBin = dataBin;
+  public SenderImpl(DataProvider dataProvider) {
+    this.dataProvider = dataProvider;
     this.request = getInitialRequest();
   }
 
   @Override
   public R send() {
     String response = request.toString();
-    log.info("we've sent the following message: {}", response);
+    log.info("we've sent the following message:\n{}", response);
     byte[] data = SerializationUtils.serialize(response);
     return (R) SerializationUtils.deserialize(data);
   }
@@ -50,9 +50,9 @@ public class SenderImpl<R> implements Sender<R> {
 
   private RequestDto getInitialRequest(){
     return RequestDto.builder()
-      .age(MoreObjects.firstNonNull(dataBin.getAge(), 10))
+      .age(MoreObjects.firstNonNull(dataProvider.getAge(), 10))
       .name("Fedor")
-      .bin(dataBin.getFromBin())
+      .bin(dataProvider.getFromBin())
       .build();
   }
 

@@ -4,12 +4,11 @@ import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.mrtxee.playgrnd.sender.service.RequestInvoker;
-import org.springframework.stereotype.Controller;
 
-@Controller
+@org.springframework.stereotype.Controller
 @RequiredArgsConstructor
 @Slf4j
-public class SenderController {
+public class Controller {
   private final RequestInvoker requestInvoker;
 
   @PostConstruct
@@ -22,7 +21,7 @@ public class SenderController {
       .setBin("бин выставлен вручную")
       .send();
 
-    log.info("response is {}", response);
+    log.info("response is:\n{}", response);
 
   }
 }

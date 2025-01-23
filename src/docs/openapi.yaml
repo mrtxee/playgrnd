@@ -1,0 +1,41 @@
+openapi: "3.1.0"
+openapi: "3.1.0"
+info:
+  title: "playgrnd API"
+  description: "playgrnd API"
+  version: "1.0.0"
+servers:
+  - url: "https://playgrnd"
+paths:
+  /:
+    get:
+      summary: "GET "
+      operationId: "index"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "string"
+  /sender:
+    get:
+      summary: "GET sender"
+      operationId: "sendDemo"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/ControllerResponseDto"
+components:
+  schemas:
+    ControllerResponseDto:
+      type: "object"
+      properties:
+        time:
+          type: "string"
+          format: "date-time"
+        response:
+          type: "string"

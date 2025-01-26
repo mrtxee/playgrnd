@@ -12,14 +12,15 @@ public abstract class AbstractQuickSort {
   }
 
   protected static void swap(int[] arr, int i, int j) {
+    if (i == j) return;
     int temp = arr[i];
     arr[i] = arr[j];
     arr[j] = temp;
   }
 
   protected static void swapWithInfo(int[] arr, int i, int j) {
+    System.out.printf("%s swapping wall:[%s]%s, current:[%s]%s%n", Arrays.toString(arr), i, arr[i], j, arr[j]);
     swap(arr, i, j);
-    System.out.printf("%s swapped: [%s]%s, [%s]%s%n", Arrays.toString(arr), i, arr[i], j, arr[j]);
   }
 
   private static void swapTest() {

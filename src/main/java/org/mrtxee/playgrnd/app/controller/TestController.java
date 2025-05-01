@@ -1,25 +1,25 @@
 package org.mrtxee.playgrnd.app.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.mrtxee.playgrnd.app.annotaion.ArtemNotated;
+import org.mrtxee.playgrnd.app.aspect.AxNotated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping()
-public class RootPathTestController {
+@RequestMapping("/test")
+public class TestController {
 
-  @GetMapping("/test")
-  @ArtemNotated
+  @GetMapping
+  @AxNotated
   public String index() {
-    return "RootPathTestController index";
+    return "TestController index";
   }
 
-  @GetMapping("/test/all")
+  @GetMapping("/all")
   public String all() {
-    return "RootPathTestController all PAGE";
+    return "TestController all PAGE";
   }
 
 }

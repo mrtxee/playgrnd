@@ -1,4 +1,4 @@
-package org.mrtxee.playgrnd.app.annotaion;
+package org.mrtxee.playgrnd.app.aspect;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,5 +7,5 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface ArtemNotated {
+public @interface AxNotated {
 }

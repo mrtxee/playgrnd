@@ -8,8 +8,8 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan({"org.mrtxee.playgrnd.*"})
 public class PlaygrndApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(PlaygrndApplication.class, args);
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(PlaygrndApplication.class, args);
+  }
 
 }

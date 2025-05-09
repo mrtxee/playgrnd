@@ -1,9 +1,9 @@
 package org.mrtxee.playgrnd.sandbox.annotate;
 
 import java.lang.reflect.Method;
-import org.mrtxee.playgrnd.sandbox.annotate.annotaion.AxReflect;
+import org.mrtxee.playgrnd.sandbox.annotate.annotaion.Axn;
 
-public class ReflectAnnotationProcessor {
+public class ReflectionBasedAnnotationProcessor {
   public static void main(String[] args) throws Exception {
     Main myClass = new Main();
 
@@ -12,7 +12,7 @@ public class ReflectAnnotationProcessor {
 
     for (Method method : methods) {
       // Проверяем, имеет ли метод аннотацию @AxNotated
-      if (method.isAnnotationPresent(AxReflect.class)) {
+      if (method.isAnnotationPresent(Axn.class)) {
         // Получаем параметры метода
         Class<?>[] parameterTypes = method.getParameterTypes();
 

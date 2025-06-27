@@ -23,6 +23,12 @@ public abstract class AbstractQuickSort {
     swap(arr, i, j);
   }
 
+  protected static void swapWithInfo(int[] arr, int i, int j, int pivot) {
+    System.out.printf("%s swapping wall:[%s]%s, current:[%s]%s, pivot:%s%n", Arrays.toString(arr), i, arr[i], j,
+      arr[j], pivot);
+    swap(arr, i, j);
+  }
+
   private static void swapTest() {
     int[] arr = new int[]{1, 2, 3};
     swap(arr, 0, 1);

@@ -20,19 +20,24 @@ import javax.tools.JavaFileObject;
 public class AxnProcessor extends AbstractProcessor {
   @Override
   public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
+    System.out.println("process");
     for (TypeElement annotation : annotations) {
+      System.out.println(annotation);
       for (Element element : roundEnv.getElementsAnnotatedWith(annotation)) {
+        System.out.println(element);
         if (element.getKind() == ElementKind.METHOD) {
           ExecutableElement method = (ExecutableElement) element;
           TypeElement classElement = (TypeElement) method.getEnclosingElement();
+          System.out.println(classElement);
+          System.out.println(element);
 
-          try {
-            generateWrapperClass(classElement, method);
-          } catch (IOException e) {
-            processingEnv.getMessager().printMessage(
-              Diagnostic.Kind.ERROR,
-              "Failed to generate wrapper for " + method);
-          }
+//          try {
+//            generateWrapperClass(classElement, method);
+//          } catch (IOException e) {
+//            processingEnv.getMessager().printMessage(
+//              Diagnostic.Kind.ERROR,
+//              "Failed to generate wrapper for " + method);
+//          }
         }
       }
     }

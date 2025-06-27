@@ -18,9 +18,8 @@ public class QuickSortByArche3 extends AbstractQuickSort {
 
   private int quickSortPartitionAndReturnSortedElementIndex(int[] arr, int startIndex, int endIndex) {
     int pivot = arr[endIndex];
-    /*
-     начальный индекс стены должен быть меньше стартового индекса,
-     т.к. мы всегда инкриментим индекс стены и он может выйти на границы массива
+    /* Начальный индекс стены должен быть меньше стартового индекса,
+       т.к. мы всегда инкриментим индекс стены и он может выйти на границы массива
      */
     int wallIndex = startIndex - 1;
 

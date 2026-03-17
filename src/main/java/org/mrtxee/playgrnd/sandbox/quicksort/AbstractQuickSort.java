@@ -7,7 +7,7 @@ public abstract class AbstractQuickSort {
   abstract void quickSort(int[] arr);
 
   public static void main(String[] args) {
-    System.out.println("sandbox");
+    System.out.println("swapTest");
     swapTest();
   }
 
@@ -35,6 +35,7 @@ public abstract class AbstractQuickSort {
     System.out.println(arr[0] == 2);
     System.out.println(arr[1] == 1);
     System.out.println(arr[2] == 3);
+    assert (arr[2] == 3);
   }
 
 

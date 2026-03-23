@@ -1,4 +1,4 @@
-package org.mrtxee.playgrnd.stuff;
+package org.mrtxee.playgrnd.sandbox;
 
 import java.util.Arrays;
 import java.util.List;

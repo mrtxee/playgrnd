@@ -1,10 +1,10 @@
-package org.mrtxee.playgrnd.student.controller;
+package org.mrtxee.playgrnd.sandbox.student.controller;
 
 import java.util.Collection;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.mrtxee.playgrnd.student.dto.Student;
-import org.mrtxee.playgrnd.student.service.StudentService;
+import org.mrtxee.playgrnd.sandbox.student.dto.Student;
+import org.mrtxee.playgrnd.sandbox.student.service.StudentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

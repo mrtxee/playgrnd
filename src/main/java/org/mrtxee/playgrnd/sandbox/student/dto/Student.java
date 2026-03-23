@@ -1,4 +1,4 @@
-package org.mrtxee.playgrnd.student.dto;
+package org.mrtxee.playgrnd.sandbox.student.dto;
 
 import lombok.Builder;
 

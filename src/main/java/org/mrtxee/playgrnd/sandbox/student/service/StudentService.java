@@ -1,11 +1,11 @@
-package org.mrtxee.playgrnd.student.service;
+package org.mrtxee.playgrnd.sandbox.student.service;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Random;
-import org.mrtxee.playgrnd.student.dto.Student;
+import org.mrtxee.playgrnd.sandbox.student.dto.Student;
 import org.springframework.stereotype.Service;
 
 @Service

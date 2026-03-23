@@ -1,6 +1,5 @@
 package org.mrtxee.playgrnd.app.controller;
 
-import lombok.RequiredArgsConstructor;
 import org.mrtxee.playgrnd.app.aspect.AxNotated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

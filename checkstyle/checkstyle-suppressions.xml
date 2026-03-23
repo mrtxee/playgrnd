@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC
+        "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+        "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+    <!-- Игнорировать MissingJavadocMethod во всех тестах -->
+    <suppress checks="MissingJavadocMethod"/>
+    <suppress checks="AbbreviationAsWordInName"/>
+    <suppress checks="MissingJavadocType"/>
+    <suppress checks="MethodName"/>
+    <!--    'xNode' must match pattern '^(_|[a-z]([a-z0-9][a-zA-Z0-9]*)?)$'-->
+    <suppress checks="LocalVariableName"/>
+    <suppress checks="MultipleVariableDeclarations"/>
+
+</suppressions>

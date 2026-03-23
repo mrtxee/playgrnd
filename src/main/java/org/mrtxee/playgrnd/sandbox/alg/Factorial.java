@@ -11,16 +11,16 @@ public class Factorial {
 
   private static long calcFactorial(int n) {
     return (n == 1)
-      ? n
-      : n * calcFactorial(n - 1);
+        ? n
+        : n * calcFactorial(n - 1);
   }
 
   /**
-   * Для n > 20
+   * Для n > 20,=.
    */
   private static BigInteger calcFactorialBig(int n) {
     return (n == 1)
-      ? BigInteger.ONE
-      : BigInteger.valueOf(n).multiply(calcFactorialBig(n - 1));
+        ? BigInteger.ONE
+        : BigInteger.valueOf(n).multiply(calcFactorialBig(n - 1));
   }
 }

@@ -15,7 +15,5 @@ public class LambdaExample {
 
     // Можно использовать prefix в лямбде
     names.forEach(name -> System.out.println(prefix + name));
-
-    //prefix = "New: "; // Если раскомментировать - лямбда перестанет компилироваться!
   }
 }

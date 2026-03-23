@@ -6,6 +6,7 @@ public class Main {
     test(Dad.class);
     test(Grandpa.class);
   }
+
   public static void test(Class<? extends Grandpa> clazz) {
     System.out.println(clazz.getSimpleName());
   }
@@ -13,6 +14,6 @@ public class Main {
   public interface Grandpa {
   }
 
-  public interface Dad extends Grandpa{
+  public interface Dad extends Grandpa {
   }
 }

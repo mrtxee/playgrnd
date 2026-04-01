@@ -1,4 +1,4 @@
-package org.mrtxee.playgrnd.yandexti;
+package org.mrtxee.playgrnd.ti.solutions.yandexti;
 
 /**
  * Поиск цикла в связном списке
@@ -27,7 +27,7 @@ public class CycleDetection {
     }
 
     // Шаг 2: находим начало цикла
-    // Расстояние от head до начала цикла математически равно расстоянию от точки встречи до
+    // Расстояние от head до начала цикла равно расстоянию от точки встречи до
     // начала цикла (по ходу движения).
     slow = head;
     while (slow != fast) {

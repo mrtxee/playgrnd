@@ -1,4 +1,4 @@
-package org.mrtxee.playgrnd.yandexti;
+package org.mrtxee.playgrnd.ti.solutions.yandexti;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;

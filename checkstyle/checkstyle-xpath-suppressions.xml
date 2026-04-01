@@ -4,14 +4,11 @@
         "https://checkstyle.org/dtds/suppressions_1_2_xpath_experimental.dtd">
 
 <suppressions>
-    <!-- Подавление MissingJavadocMethod для всех методов -->
-    <suppress-xpath
-            checks="MissingJavadocMethod"
-            query="/CLASS_DEF/METHOD_DEF"/>
-    <suppress-xpath
-            checks="MAbbreviationAsWordInName"
-            query="/CLASS_DEF/METHOD_DEF"/>
-    <suppress-xpath
-            checks="MissingJavadocType"
-            query="/CLASS_DEF/METHOD_DEF"/>
+
+    <suppress-xpath checks="MissingJavadocMethod" query="/CLASS_DEF/METHOD_DEF"/>
+    <suppress-xpath checks="MAbbreviationAsWordInName" query="/CLASS_DEF/METHOD_DEF"/>
+    <suppress-xpath checks="MissingJavadocType" query="/CLASS_DEF/METHOD_DEF"/>
+    <suppress-xpath checks="SummaryJavadoc" query="/CLASS_DEF/METHOD_DEF"/>
+    <suppress-xpath checks="JavadocParagraph" query="/CLASS_DEF/METHOD_DEF"/>
+
 </suppressions>

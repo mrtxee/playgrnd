@@ -1,4 +1,4 @@
-package org.mrtxee.playgrnd.yandexti;
+package org.mrtxee.playgrnd.ti.solutions.yandexti;
 
 
 import java.util.concurrent.ThreadLocalRandom;
@@ -11,6 +11,7 @@ import java.util.concurrent.atomic.AtomicLongArray;
  */
 public class SegmentedCounter {
   private static final int SEGMENTS = 16;
+  // это тип т.к. Атомарность операций, Потокобезопасность, Высокая производительность из-за CAS
   private final AtomicLongArray segments = new AtomicLongArray(SEGMENTS);
 
   public SegmentedCounter() {

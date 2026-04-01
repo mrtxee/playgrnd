@@ -1,4 +1,4 @@
-package org.mrtxee.playgrnd.yandexti;
+package org.mrtxee.playgrnd.ti.solutions.yandexti;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -23,7 +23,9 @@ public class ThreadSafeLRUCache<K, V> {
     /*
       LinkedHashMap — оптимальный выбор для LRU‑кэша, т.к.:
       - Сохраняет порядок элементов
-      - при каждом обращении через get() элементм перемещается в конец списка, что важно для LRU
+      - при каждом обращении через get() элемент перемещается в конец списка, что важно для LRU
+        - при режиме Access Order (accessOrder = true)
+          - Перемещает элемент в конец (как "последний доступ")
       - Обеспечивает O(1) для базовых операций
      */
     this.cache = new LinkedHashMap<K, V>(16, 0.75f, true) {

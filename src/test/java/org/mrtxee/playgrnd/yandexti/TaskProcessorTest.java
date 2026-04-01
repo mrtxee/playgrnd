@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
+import org.mrtxee.playgrnd.ti.solutions.yandexti.TaskProcessor;
 
 import static org.junit.jupiter.api.Assertions.*;
 

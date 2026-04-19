@@ -61,20 +61,20 @@ package org.mrtxee.playgrnd.ti.log.d20260403;
  * https://leetcode.com/problems/single-number/
  * 	 - решить за O(1) по памяти
  * + https://leetcode.com/problems/two-sum/
- * +-https://leetcode.com/problems/4sum/
- * https://leetcode.com/problems/group-anagrams/
- * https://leetcode.com/problems/valid-anagram/
+ * -+https://leetcode.com/problems/4sum/
+ * + https://leetcode.com/problems/group-anagrams/
+ * + https://leetcode.com/problems/valid-anagram/
  *
  * 	2. sort
- * https://leetcode.com/problems/merge-intervals/
+ * + https://leetcode.com/problems/merge-intervals/
  *
  * 	3. queue/stack
  * https://leetcode.com/problems/valid-parentheses/
  *
  * 	4. sliding window
- * https://leetcode.com/problems/sliding-window-median/
+ * -+ https://leetcode.com/problems/sliding-window-median/
  * https://leetcode.com/problems/sliding-window-maximum/
- * https://leetcode.com/problems/longest-repeating-character-replacement/
+ * -+ https://leetcode.com/problems/longest-repeating-character-replacement/
  *
  * 	5. iterator
  * https://leetcode.com/problems/peeking-iterator/

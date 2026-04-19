@@ -105,8 +105,8 @@ public class FourSum {
 
   /**
    * Оценка сложности
-   * Временная: O(n^2)
-   * Пространственная: O(log(n))
+   * Time Complexity: O(n^2)
+   * Space Complexity: O(log(n))
    */
 
 }

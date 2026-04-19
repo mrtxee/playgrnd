@@ -25,41 +25,29 @@ public class MergeSort {
     if (arr == null || arr.length <= 1) {
       return;
     }
-    // Создаём вспомогательный массив один раз, чтобы не пересоздавать его на каждом шаге рекурсии
-    int[] temp = new int[arr.length];
     // Запускаем рекурсивную сортировку для всего диапазона индексов [0, length-1]
-    sort(arr, temp, 0, arr.length - 1);
+    sort(arr, 0, arr.length - 1);
   }
 
-  /**
-   * 🌳 Визуализация рекурсии на примере [3,1,4,2]:
-   *
-   *                    [3,1,4,2]  ← sort(0,3)
-   *                   /          \
-   *           [3,1] sort(0,1)   [4,2] sort(2,3)
-   *           /    \            /    \
-   *      [3] sort(0,0) [1] sort(1,1)  [4] sort(2,2) [2] sort(3,3)
-   *           \    /            \    /
-   *        merge → [1,3]      merge → [2,4]
-   *                   \        /
-   *                 merge → [1,2,3,4] ✅
-   */
-  private static void sort(int[] arr, int[] temp, int left, int right) {
+  private static void sort(int[] arr, int left, int right) {
     // Если левая граница >= правой, подмассив пуст или содержит 1 элемент → сортировать нечего
     if (left >= right) {
       return;
     }
     // Находим середину текущего подмассива, безопасно избегая переполнения при (left + right)
-    int mid = left + (right - left) / 2;
+    int divisionIndex = left + (right - left) / 2;
     // Рекурсивно делим и сортируем левую половину массива
-    sort(arr, temp, left, mid);
+    sort(arr, left, divisionIndex);
     // Рекурсивно делим и сортируем правую половину массива
-    sort(arr, temp, mid + 1, right);
+    sort(arr, divisionIndex + 1, right);
     // Сливаем две уже отсортированные половины в один упорядоченный подмассив
-    merge(arr, temp, left, mid, right);
+    merge(arr, left, divisionIndex, right);
   }
 
-  private static void merge(int[] arr, int[] temp, int left, int mid, int right) {
+  private static void merge(int[] arr, int left, int divisionIndex, int right) {
+
+    // Создаём вспомогательный массив один раз
+    int[] temp = new int[arr.length];
     // Копируем текущий рабочий диапазон во вспомогательный массив,
     // чтобы не перезаписать данные до слияния
     for (int i = left; i <= right; i++) {
@@ -68,11 +56,11 @@ public class MergeSort {
     // Указатель на текущий элемент левой отсортированной половины
     int leftSortedIndex = left;
     // Указатель на текущий элемент правой отсортированной половины
-    int rightSortedIndex = mid + 1;
+    int rightSortedIndex = divisionIndex + 1;
     // Указатель на позицию записи результата в исходный массив
     int leftBound = left;
     // Пока оба указателя не вышли за границы своих половин, сравниваем и записываем меньший
-    while (leftSortedIndex <= mid && rightSortedIndex <= right) {
+    while (leftSortedIndex <= divisionIndex && rightSortedIndex <= right) {
       // Если элемент из левой половины меньше или равен, записываем его и двигаем оба указателя
       if (temp[leftSortedIndex] <= temp[rightSortedIndex]) {
         arr[leftBound++] = temp[leftSortedIndex++];
@@ -83,7 +71,7 @@ public class MergeSort {
       }
     }
     // Если в левой половине остались элементы, дописываем их в конец (правая уже закончилась)
-    while (leftSortedIndex <= mid) {
+    while (leftSortedIndex <= divisionIndex) {
       arr[leftBound++] = temp[leftSortedIndex++];
     }
     // Если в правой остались элементы, дописываем их (нужен для корректности, хотя часто не срабатывает)

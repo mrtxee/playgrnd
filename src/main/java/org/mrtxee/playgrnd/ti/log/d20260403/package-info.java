@@ -69,7 +69,7 @@ package org.mrtxee.playgrnd.ti.log.d20260403;
  * + https://leetcode.com/problems/merge-intervals/
  *
  * 	3. queue/stack
- * https://leetcode.com/problems/valid-parentheses/
+ * + https://leetcode.com/problems/valid-parentheses/
  *
  * 	4. sliding window
  * -+ https://leetcode.com/problems/sliding-window-median/
@@ -80,9 +80,9 @@ package org.mrtxee.playgrnd.ti.log.d20260403;
  * https://leetcode.com/problems/peeking-iterator/
  *
  * 	6. greedy problems
- * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
- * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
- * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/
+ * + https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+ * + https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
+ * -+ https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/
  *
  * 3. Архитектурная секцию.
  *
